@@ -1,0 +1,34 @@
+
+
+CREATE TABLE budgetTracking(Date datetime,				// budgettracking tablosunu yaratır.
+Description varchar(255),
+Money double,
+Type varchar(255)
+);
+
+
+
+
+select * from budgettracking;						//TABLONUN TAMAMINI VERİR (Gösterir)
+
+
+
+INSERT INTO budgetTracking (Date, Description, Money, Type)		//TABLOYA VERİ GİRER
+VALUES 
+  ('2023-11-20 18:30:00', 'Food', 500, 'Outcome'),
+  ('2023-11-20 19:30:00', 'Cash', 800, 'Income'); 
+  
+  
+  
+  DELETE FROM budgettracking;  						//Tablonun içindeki verileri siler
+
+  DROP TABLE budgettracking;						// TÜM TABLOYU SİLER
+
+
+
+INSERT INTO budgetTracking (Date, Description, Money, Type)		// TABLOYA VERİ EKLER
+VALUES 
+  ('2023-11-21 18:30:00', 'Ticket', 100, 'Outcome');
+
+
+SELECT * FROM budgetTracking WHERE Type = 'Outcome';			// Type datası Outcome olan satırları listeler (Sorgular).
